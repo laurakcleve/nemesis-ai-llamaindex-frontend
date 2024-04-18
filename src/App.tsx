@@ -18,6 +18,7 @@ function App() {
 
   async function ask(question: string) {
     setIsLoading(true)
+    console.log(import.meta.env.VITE_SERVER_URL)
     fetch(import.meta.env.VITE_SERVER_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
