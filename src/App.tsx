@@ -18,7 +18,7 @@ function App() {
 
   async function ask(question: string) {
     setIsLoading(true)
-    fetch('http://localhost:5601/query', {
+    fetch(import.meta.env.VITE_SERVER_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(question),
